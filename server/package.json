@@ -15,8 +15,8 @@
   "license": "ISC",
 
   "jest":{
-    "testEnvironment": "node",
-    "testTimeout": 60000
+    "testEnvironment": "node"
+
   },
 
   "dependencies": {
