@@ -9,8 +9,10 @@ describe('Launches API', () => {
         await mongoConnect();
     });
 
-    afterAll(async () => {
-        await mongoDisconnect();
+    afterAll( () => {
+        setTimeout(async () => {
+            await mongoDisconnect();
+        }, 6000)
     });
 
     describe('Test GET /launches', () => {
