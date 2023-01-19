@@ -10,8 +10,8 @@ describe('Launches API', () => {
         // done();
     });
 
-    afterAll(async (done) => {
-        await mongoDisconnect();
+    afterAll((done) => {
+        mongoDisconnect();
         done();
     });
 
