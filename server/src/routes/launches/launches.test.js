@@ -5,14 +5,14 @@ const { mongoConnect, mongoDisconnect } = require('../../services/mongo');
 
 describe('Launches API', () => {
 
-    beforeAll(async () => {
+    beforeAll(async (done) => {
         await mongoConnect();
+        // done();
     });
 
-    afterAll( () => {
-        setTimeout(async () => {
-            await mongoDisconnect();
-        }, 6000)
+    afterAll(async (done) => {
+        await mongoDisconnect();
+        done();
     });
 
     describe('Test GET /launches', () => {
