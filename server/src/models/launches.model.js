@@ -23,7 +23,7 @@ async function saveLaunch(launch) {
 
     const planet = await planetsDatabse.find({
         keplerName: launch.target
-    }).maxTimeMS(120000);
+    });
 
     if (!planet) {
         throw new Error("NO MATCHING PLANET")
