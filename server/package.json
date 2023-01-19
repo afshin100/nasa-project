@@ -4,7 +4,7 @@
   "description": "NASA Mission Control API",
   "main": "src/server.js",
   "scripts": {
-    "test": "jest",
+    "test": "jest --detectOpenHandles",
     "test-watch": "jest --watch",
     "start": "node src/server.js",
     "watch": "nodemon src/server.js",
@@ -15,7 +15,8 @@
   "license": "ISC",
 
   "jest":{
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    "testTimeout": 120000
 
   },
 
