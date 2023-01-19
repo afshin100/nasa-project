@@ -10,9 +10,9 @@ describe('Launches API', () => {
         // done();
     });
 
-    afterAll((done) => {
-        mongoDisconnect();
-        done();
+    afterAll(async () => {
+        await mongoDisconnect();
+        // done();
     });
 
     describe('Test GET /launches', () => {
