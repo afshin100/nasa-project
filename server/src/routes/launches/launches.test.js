@@ -9,9 +9,9 @@ describe('Launches API', () => {
         await mongoConnect();
     });
 
-    // afterAll(async () => {
-    //     await mongoDisconnect();
-    // });
+    afterAll(async () => {
+        await mongoDisconnect();
+    });
 
     describe('Test GET /launches', () => {
         test('It should response with 200 success', async () => {
